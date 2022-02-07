@@ -91,6 +91,7 @@ a {
 a:hover {
   text-decoration: none;
   color: var(--secondary);
+  opacity: 70%;
 }
 
 header {
@@ -166,6 +167,7 @@ input {
   outline: none;
   border-radius: 3px;
   transition: box-shadow 0.2s;
+  width: 85%;
 }
 
 input:focus {

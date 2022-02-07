@@ -4,21 +4,30 @@ import About from './components/About';
 import Nav from './components/Nav';
 import ContactForm from './components/Contact';
 import Footer from './components/Footer';
+import Portfolio from './components/Portfolio';
 
 function App() {
 
   const [projects] = useState([
     {
-      name:'Run-Buddy',
-      description: 'HTML, CSS, JavaScript..etc'
-    },
-    {
       name: 'Budget Tracking PWA',
       description: 'Budget Tracking PWA with offline functionality'
     },
     {
+      name: 'Tech-Blog',
+      description: 'A Tech Blog for Tech Bloggers'
+    },
+    {
       name: 'trippin-worldwide',
       description: 'Group project with integrated frontend and backend.'
+    },
+    {
+      name: 'Zoo-Keeper',
+      description: 'A front-end and back-end zoo-keeper app.'
+    },
+    {
+      name: 'Note-Taker App',
+      description: 'note note notetaker'
     }
   ]);
 
@@ -44,6 +53,9 @@ function App() {
         <ContactForm></ContactForm>
         </div>
       </main>
+      <div>
+        <Portfolio></Portfolio>
+      </div>
         <div>
           <Footer></Footer>
         </div>

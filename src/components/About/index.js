@@ -10,7 +10,7 @@ function About() {
       <img src={hankImg} className="picture" style={{ width: "90%" }} alt="hank" />
       </div>
       <div className="about">
-      <p style={{width: "55%"}}>
+      <p style={{width: "85%"}}>
       Hi, I'm Hank and welcome to my portfolio! I am an aspiring web developer 
       with a passion for developing my skills. Lately I have been exploring mySQL, 
       sequelize, mongoDB and mongoose on the backend and React on the front end. You can check out my 

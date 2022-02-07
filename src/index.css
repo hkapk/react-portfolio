@@ -3,6 +3,7 @@ main {
   max-width: 90%;
   padding: 50px 30px;
 }
+
 :root {
   --primary: #add8e6;
   --secondary: #f3a847;
@@ -75,6 +76,7 @@ h6 {
 
 p {
   font-size: 1.1rem;
+  font-weight: lighter;
   margin-top: 0;
 }
 
@@ -88,15 +90,19 @@ a {
 
 a:hover {
   text-decoration: none;
-  color: var(--primary);
+  color: var(--secondary);
 }
 
 header {
-  background: var(--dark);
+  background: var(--light);
+  padding: 0;
+  margin: 0;
+  border-bottom: solid 10px;
 }
 
 header a {
-  color: var(--light);
+  color: var(--dark);
+  margin-left: 25px;
 }
 
 button {
@@ -129,13 +135,11 @@ span[role="img"] {
 }
 
 #contact-form {
-  display: block;
-  text-align: left;
   padding: 10px;
 }
 
 form {
-  width: 50%;
+  width: 60%;
   border: solid 2px;
 }
 
@@ -167,7 +171,7 @@ nav li {
 }
 
 textarea {
-  width: 600px;
+  width: 90%;
   height: 120px;
   border: 3px solid #cccccc;
   padding: 5px;
@@ -211,6 +215,7 @@ textarea {
 .my-2 {
   margin-top: var(--spacing-two);
   margin-bottom: var(--spacing-two);
+  flex-wrap: wrap;
 }
 
 .my-5 {
@@ -286,11 +291,14 @@ button {
   font-weight: 600;
   margin-bottom: 30px;
   padding: 10px 15px;
+  margin-left: 40%;
+  margin-top: 1%;
 }
 
 input {
   padding: 10px 10px;
   margin: 10px 10px;
+  max-width: 50%;
 }
 
 a {

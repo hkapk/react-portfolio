@@ -5,8 +5,7 @@ function Nav() {
         <header>
         <h2>
           <a href="/">
-            <span role="img" aria-label="turtle"> 🐢</span> 
-           Hank Kapka
+           Hank Kapka 
           </a>
         </h2>
         <nav>

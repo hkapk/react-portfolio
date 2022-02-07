@@ -4,6 +4,7 @@ import tech from "../../assets/project-img/tech-blog.png";
 import trippin from "../../assets/project-img/trippin-worldwide.png";
 import zoo from "../../assets/project-img/zookeeper.png"
 import note from "../../assets/project-img/note.png";
+import food from "../../assets/project-img/food.png";
 
 function Portfolio() {
     return (
@@ -25,6 +26,9 @@ function Portfolio() {
             </a>
             <a href="https://nameless-escarpment-59702.herokuapp.com/">
             <img src={note} className="icon" style={{ width: "90%" }} alt="note-taker" />
+            </a>
+            <a href="https://hkapk.github.io/food-festival/index.html">
+            <img src={food} className="icon" style={{ width: "90%" }} alt="note-taker" />
             </a>
             </div>
         </section>

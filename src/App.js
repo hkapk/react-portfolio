@@ -26,8 +26,12 @@ function App() {
       description: 'A front-end and back-end zoo-keeper app.'
     },
     {
-      name: 'Note-Taker App',
+      name: 'Note-Taker',
       description: 'note note notetaker'
+    },
+    {
+      name: 'Food-Festival',
+      description: 'Food-festival App with React front end'
     }
   ]);
 

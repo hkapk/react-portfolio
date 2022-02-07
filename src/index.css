@@ -56,6 +56,12 @@ h1 {
 
 h2 {
   font-size: 2rem;
+  margin-left: 80px;
+  margin-top: 20px;
+}
+
+nav {
+  margin-left: 25px;
 }
 
 h3 {

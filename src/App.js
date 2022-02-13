@@ -5,61 +5,38 @@ import Nav from './components/Nav';
 import ContactForm from './components/Contact';
 import Footer from './components/Footer';
 import Portfolio from './components/Portfolio';
+import Resume from './components/Resume';
+
 
 function App() {
 
-  const [projects] = useState([
-    {
-      name: 'Budget Tracking PWA',
-      description: 'Budget Tracking PWA with offline functionality'
-    },
-    {
-      name: 'Tech-Blog',
-      description: 'A Tech Blog for Tech Bloggers'
-    },
-    {
-      name: 'trippin-worldwide',
-      description: 'Group project with integrated frontend and backend.'
-    },
-    {
-      name: 'Zoo-Keeper',
-      description: 'A front-end and back-end zoo-keeper app.'
-    },
-    {
-      name: 'Note-Taker',
-      description: 'note note notetaker'
-    },
-    {
-      name: 'Food-Festival',
-      description: 'Food-festival App with React front end'
+
+
+  const [currentPage, setCurrentPage] = useState('About');
+
+  //check what value is the currentPage, rendering the value depending on which is current
+  const renderPage = () => {
+    if (currentPage === 'About') {
+      return <About />;
     }
-  ]);
+    if (currentPage === 'Portfolio') {
+      return <Portfolio />;
+    }
+    if (currentPage === 'Contact') {
+      return <ContactForm />
+    }
+    if (currentPage === 'Resume') {
+      return <Resume />
+    }
+  };
 
-  const [currentProject, setCurrentProject] = useState(projects[0]);
-
-  const [contactSelected, setContactSelected] = useState(false);
-
+  const handlePageChange = (page) => setCurrentPage(page);
 
   return (
     <div>
-      <Nav>
-        projects={projects}
-        setCurrentProject={setCurrentProject}
-        currentProject={currentProject}
-        contactSelected={contactSelected}
-        setContactSelected={setContactSelected}
-      </Nav>
-      <main>
-        <div>
-        <About></About>
-        </div>
-        <div>
-        <ContactForm></ContactForm>
-        </div>
-      </main>
-      <div>
-        <Portfolio></Portfolio>
-      </div>
+      <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
+      {renderPage()}
+      
         <div>
           <Footer></Footer>
         </div>

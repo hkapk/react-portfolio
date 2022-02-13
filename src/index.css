@@ -52,6 +52,7 @@ h6 {
 
 h1 {
   font-size: 2.25rem;
+  margin-left: 5%;
 }
 
 h2 {
@@ -114,6 +115,8 @@ header a {
   margin-left: 35px;
   margin-top: 35px;
 }
+nav-link {
+}
 
 button {
   font-size: 1rem;
@@ -142,6 +145,7 @@ img {
 
 .picture {
   width: 100%;
+  margin-left: 5%;
 }
 .row {
   flex-direction: row;
@@ -159,6 +163,7 @@ span[role="img"] {
 #contact-form {
   padding: 10px;
   width: 85%;
+  margin: 5% 5% 5%;
 }
 
 form {
@@ -345,5 +350,16 @@ footer {
 
 .logo {
   margin: 0;
-  padding: 0;
+  padding: 10px;
+  gap: 0;
+}
+
+.icon {
+  margin-left: 43%;
+}
+
+.profile-icon {
+  margin: 10px 10px;
+  padding: 10px 10px;
+  gap: 5px;
 }

@@ -8,18 +8,18 @@ function Footer() {
     return (
         
         <footer className="footer">
-            <div className="row">
+            <div className="row icon">
             <a href="https://www.github.com/hkapk">
-            <img src={gitHub} className="logo" style={{ width: "50%" }} alt="github" />
+            <img src={gitHub} className="logo" style={{ width: "60px" }} alt="github" />
             </a>
             <a href="https://www.linkedin.com/in/hank-kapka">
-            <img src={linkedin} className="logo" style={{ width: "12%" }} alt="instagram" />
+            <img src={linkedin} className="logo" style={{ width: "60px" }} alt="instagram" />
             </a>
             <a href="mailto:hankkapka@gmail.com">
-            <img src={gmail} className="logo" style={{ width: "50%" }} alt="gmail" />
+            <img src={gmail} className="logo" style={{ width: "60px" }} alt="gmail" />
             </a>
                 </div>
-            Made by Hank
+            <p className="tag">Made by Hank</p>
         </footer>
     );
 }

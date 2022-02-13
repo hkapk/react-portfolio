@@ -16,9 +16,9 @@ function Resume() {
              Hey It's me.
             <a href="./assets/resume.pdf" download target="_blank">Download my resume</a>
             <div className="row">
-            <img src= {css} className="-icon" style ={{ width: "" }} alt="css"></img>
-            <img src= {html} className="profile-icon" style ={{ width: "" }} alt="html"></img>
-            <img src= {javascript} className="profile-icon" style ={{ width: "" }} alt="javascript"></img>
+            <img src= {css} className="profile-icon" style ={{ width: "10%" }} alt="css"></img>
+            <img src= {html} className="profile-icon" style ={{ width: "10%" }} alt="html"></img>
+            <img src= {javascript} className="profile-icon" style ={{ width: "15%" }} alt="javascript"></img>
             </div>
             <div className="row">
             <img src= {jquery} className="profile-icon" style ={{ width: "5%" }} alt="jquery"></img>

@@ -8,7 +8,7 @@ function Footer() {
     return (
         
         <footer className="footer">
-            <div className="row icon">
+            <div className="row-icon">
             <a href="https://www.github.com/hkapk">
             <img src={gitHub} className="logo" style={{ width: "60px" }} alt="github" />
             </a>
@@ -16,7 +16,7 @@ function Footer() {
             <img src={linkedin} className="logo" style={{ width: "60px" }} alt="instagram" />
             </a>
             <a href="mailto:hankkapka@gmail.com">
-            <img src={gmail} className="logo" style={{ width: "60px" }} alt="gmail" />
+            <img src={gmail} className="logo" style={{ width: "65px" }} alt="gmail" />
             </a>
                 </div>
             <p className="tag">Made by Hank</p>

@@ -52,12 +52,13 @@ h6 {
 
 h1 {
   font-size: 2.25rem;
-  margin-left: 5%;
+  margin-left: 7.5%;
+  margin-top: 5%;
 }
 
 h2 {
   font-size: 2rem;
-  margin-left: 80px;
+  margin-left: 5%;
   margin-top: 20px;
 }
 
@@ -88,11 +89,13 @@ p {
 }
 
 a {
-  color: var(--tertiary);
+  border-radius: 5px;
+  color: var(--primary);
+  font-weight: 600;
+  padding: 2px 4px;
+  margin-left: -2px;
+  margin-right: -2px;
   text-decoration: none;
-  font-weight: bold;
-  margin: 10px 10px;
-  padding: 10px 10px;
 }
 
 a:hover {
@@ -154,6 +157,10 @@ img {
 
 .about {
   margin-top: 10px;
+}
+
+.topic {
+  margin-left: 7.5%;
 }
 
 span[role="img"] {
@@ -234,6 +241,11 @@ textarea {
 .mx-2 {
   margin-right: var(--spacing-two);
   margin-left: var(--spacing-two);
+  align-items: right;
+}
+
+.profile-text {
+  margin-left: 35%;
 }
 
 .my-1 {
@@ -320,8 +332,8 @@ button {
   font-weight: 600;
   margin-bottom: 30px;
   padding: 10px 15px;
-  margin-left: 40%;
   margin-top: 1%;
+  margin-left: 5%;
 }
 
 input {
@@ -359,7 +371,6 @@ footer {
 }
 
 .profile-icon {
-  margin: 10px 10px;
   padding: 10px 10px;
-  gap: 5px;
+  border-style: solid;
 }

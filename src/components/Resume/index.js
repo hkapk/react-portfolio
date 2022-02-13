@@ -2,7 +2,7 @@ import React from 'react';
 import css from "../../assets/resume/css.png";
 import html from "../../assets/resume/html.png";
 import javascript from "../../assets/resume/JavaScript.png";
-import jquery from "../../assets/resume/jquery.jpg";
+import jquery from "../../assets/resume/jquery.png";
 import mongo from "../../assets/resume/mongo.png";
 import mysql from "../../assets/resume/mysql.png";
 import node from "../../assets/resume/node.png";
@@ -13,28 +13,31 @@ import sequelize from "../../assets/resume/sequelize.png";
 function Resume() {
     return (
         <section>
-             Hey It's me.
-            <a href="./assets/resume.pdf" download target="_blank">Download my resume</a>
-            <div className="row">
-            <img src= {css} className="profile-icon" style ={{ width: "10%" }} alt="css"></img>
-            <img src= {html} className="profile-icon" style ={{ width: "10%" }} alt="html"></img>
-            <img src= {javascript} className="profile-icon" style ={{ width: "15%" }} alt="javascript"></img>
+            <h1 id="resume-head">My skills include:</h1>
+
+            <div className="row resume-row">
+            <img src= {css} className="resume-icon" style ={{ width: "30%" }} alt="css"></img>
+            <img src= {html} className="resume-icon" style ={{ width: "30%" }} alt="html"></img>
+            <img src= {javascript} className="resume-icon" style ={{ width: "40%" }} alt="javascript"></img>
             </div>
-            <div className="row">
-            <img src= {jquery} className="profile-icon" style ={{ width: "5%" }} alt="jquery"></img>
-            <img src= {mongo} className="profile-icon" style ={{ width: "5%" }} alt="mongo"></img>
-            <img src= {mysql} className="profile-icon" style ={{ width: "5%" }} alt="mysql"></img>
+            <div className="row resume-row">
+            <img src= {jquery} className="resume-icon" style ={{ width: "20%" }} alt="jquery"></img>
+            <img src= {mongo} className="resume-icon" style ={{ width: "45%" }} alt="mongo"></img>
+            <img src= {mysql} className="resume-icon" style ={{ width: "30%" }} alt="mysql"></img>
             </div>
-            <img src= {node} className="profile-icon" style ={{ width: "5%" }} alt="node"></img>
-            <img src= {npm} className="profile-icon" style ={{ width: "5%" }} alt="npm"></img>
-            <div className="row">
-            <img src= {react} className="profile-icon" style ={{ width: "5%" }} alt="react"></img>
-            <img src= {sequelize} className="profile-icon" style ={{ width: "5%" }} alt="sequelize"></img>
+            <div className="row resume-row">
+            <img src= {node} className="resume-icon" style ={{ width: "45%" }} alt="node"></img>
+            <img src= {npm} className="resume-icon" style ={{ width: "55%" }} alt="npm"></img>
+            </div>
+            <div className="row resume-row">
+            <img src= {react} className="resume-icon" style ={{ width: "45%" }} alt="react"></img>
+            <img src= {sequelize} className="resume-icon" style ={{ width: "45%" }} alt="sequelize"></img>
             
             </div>
            
-         
-        
+
+            <a href="./assets/resume.pdf" download target="_blank">
+                <p className="resume-link">Download my resume</p></a>
         </section>
     )
 };

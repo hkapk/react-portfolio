@@ -9,6 +9,7 @@ import node from "../../assets/resume/node.png";
 import npm from "../../assets/resume/npm.png";
 import react from "../../assets/resume/react.png";
 import sequelize from "../../assets/resume/sequelize.png";
+import resumePdf from "../../assets/resume.pdf";
 
 function Resume() {
     return (
@@ -36,7 +37,7 @@ function Resume() {
             </div>
            
 
-            <a href="./assets/resume.pdf" download target="_blank">
+            <a href={resumePdf} download target="_blank" rel="noreferrer">
                 <p className="resume-link">Download my resume</p></a>
         </section>
     )

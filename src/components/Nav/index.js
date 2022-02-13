@@ -4,7 +4,7 @@ function Nav({ currentPage, handlePageChange}) {
     return(
         <header>
         <h2>
-          <a href="/">
+          <a href="/react-portfolio/">
            Hank Kapka 
           </a>
         </h2>

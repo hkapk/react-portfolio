@@ -5,6 +5,8 @@ import trippin from "../../assets/project-img/trippin-worldwide.png";
 import zoo from "../../assets/project-img/zookeeper.png"
 import note from "../../assets/project-img/note.png";
 import food from "../../assets/project-img/food.png";
+import dgscore from "../../assets/project-img/dg.png";
+
 
 function Portfolio() {
     return (
@@ -14,8 +16,14 @@ function Portfolio() {
             <div className="row profile-row">
             <a href="https://calm-headland-49546.herokuapp.com/">
             <img src={budget} className="profile-icon" style={{ width: "1080px" }} alt="budget-tracker" />
-            
             <a href="https://github.com/hkapk/budget-tracking-PWA">
+                <p className="profile-text">View on Github</p> 
+                </a></a>
+
+            <a href="https://calm-peak-91863.herokuapp.com/">
+            <img src={dgscore} className="profile-icon" style={{ width: "1080px" }} alt="budget-tracker" />
+            
+            <a href="https://github.com/hkapk/dg-score-card">
                 <p className="profile-text">View on Github</p> 
                 </a></a>
             <a href="https://sheltered-meadow-11937.herokuapp.com/">

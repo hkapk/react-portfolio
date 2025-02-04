@@ -14,6 +14,9 @@ import resumePdf from "../../assets/resume.pdf";
 function Resume() {
     return (
         <section>
+
+<a href={resumePdf} download target="_blank" rel="noreferrer">
+<p className="resume-link">Download my resume</p></a>
             <h1 id="resume-head">My skills include:</h1>
 
             <div className="row resume-row">
@@ -31,14 +34,11 @@ function Resume() {
             <img src= {npm} className="resume-icon" style ={{ width: "55%" }} alt="npm"></img>
             </div>
             <div className="row resume-row">
-            <img src= {react} className="resume-icon" style ={{ width: "45%" }} alt="react"></img>
-            <img src= {sequelize} className="resume-icon" style ={{ width: "45%" }} alt="sequelize"></img>
+            <img src= {react} className="resume-icon" style ={{ width: "50%" }} alt="react"></img>
+            <img src= {sequelize} className="resume-icon" style ={{ width: "50%" }} alt="sequelize"></img>
             
             </div>
-           
-
-            <a href={resumePdf} download target="_blank" rel="noreferrer">
-                <p className="resume-link">Download my resume</p></a>
+        
         </section>
     )
 };

@@ -10,6 +10,7 @@ import npm from "../../assets/resume/npm.png";
 import react from "../../assets/resume/react.png";
 import sequelize from "../../assets/resume/sequelize.png";
 import resumePdf from "../../assets/resume.pdf";
+import JS_HTML_CSS from "../../assets/resume/JS_HTML_CSS.png";
 
 function Resume() {
     return (
@@ -20,23 +21,22 @@ function Resume() {
             <h1 id="resume-head">My skills include:</h1>
 
             <div className="row resume-row">
-            <img src= {css} className="resume-icon" style ={{ width: "30%" }} alt="css"></img>
-            <img src= {html} className="resume-icon" style ={{ width: "30%" }} alt="html"></img>
-            <img src= {javascript} className="resume-icon" style ={{ width: "40%" }} alt="javascript"></img>
+            <img src= {JS_HTML_CSS} className="resume-icon" style ={{ width: "45%", height: "auto" }} alt="css, JS, CSS"></img>
+            <img src= {node} className="resume-icon" style ={{ width: "45%", height: "auto" }} alt="node"></img>
             </div>
             <div className="row resume-row">
-            <img src= {jquery} className="resume-icon" style ={{ width: "20%" }} alt="jquery"></img>
-            <img src= {mongo} className="resume-icon" style ={{ width: "45%" }} alt="mongo"></img>
-            <img src= {mysql} className="resume-icon" style ={{ width: "30%" }} alt="mysql"></img>
+            <img src= {mongo} className="resume-icon" style ={{ width: "45%", height: "auto" }} alt="mongo"></img>
+            <img src= {mysql} className="resume-icon" style ={{ width: "30%", height: "auto" }} alt="mysql"></img>
             </div>
+
             <div className="row resume-row">
-            <img src= {node} className="resume-icon" style ={{ width: "45%" }} alt="node"></img>
-            <img src= {npm} className="resume-icon" style ={{ width: "55%" }} alt="npm"></img>
+            <img src= {react} className="resume-icon" style ={{ width: "45%", height: "auto" }} alt="react"></img>
+            <img src= {sequelize} className="resume-icon" style ={{ width: "45%", height: "auto" }} alt="sequelize"></img>
             </div>
-            <div className="row resume-row">
-            <img src= {react} className="resume-icon" style ={{ width: "50%" }} alt="react"></img>
-            <img src= {sequelize} className="resume-icon" style ={{ width: "50%" }} alt="sequelize"></img>
             
+            <div className="row resume-row">
+            <img src= {npm} className="resume-icon" style ={{ width: "30%", height: "auto" }} alt="npm"></img>
+            <img src= {jquery} className="resume-icon" style ={{ width: "30%", height: "auto" }} alt="jquery"></img>
             </div>
         
         </section>

@@ -4,10 +4,11 @@ import hankImg from "../../assets/hank-img.png";
 function About() {
   return (
     <section>
-      <h1 id="about">About me</h1>
+      <h1 id="about"></h1>
       <div className="row">
       <div className="picture">
-      <img src={hankImg} className="picture" style={{ width: "90%" }} alt="hank" />
+      <img src={hankImg} class="rounded" style={{ width: "90%", 
+       }} alt="hank" />
       </div>
       <div className="about">
       <p style={{width: "85%"}}>

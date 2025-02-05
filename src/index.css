@@ -152,10 +152,12 @@ img {
 }
 
 .picture {
-  width: 100%;
+  width: 95%;
   margin-left: 5%;
   flex-wrap: wrap;
+  border-radius: 15px 50px 30px 5px;
 }
+
 .row {
   flex-direction: row;
   display: flex;
@@ -411,16 +413,16 @@ footer {
 }
 
 
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
 
-.picture {
-  width: 100%;
-}
-.about {
-  width: 80%;
-  margin-left: 20%;
-}
+  .picture {
+    width: 100%;
+    border-radius: 25px;
+
+  }
+
+  .about {
+    width: 80%;
+    margin-left: 20%;
+  }
 }

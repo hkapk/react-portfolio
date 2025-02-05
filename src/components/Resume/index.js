@@ -26,13 +26,13 @@ function Resume() {
             <div className="row-icon">
             <img src= {mongo} className="logo" style ={{ width: "300px", height: "auto" }} alt="mongo"></img>
             <img src= {mysql} className="logo" style ={{ width: "300px", height: "auto" }} alt="mysql"></img>
-            <img src= {sequelize} className="logo" style ={{ width: "300px", height: "auto" }} alt="sequelize"></img>
+            <img src= {npm} className="logo" style ={{ width: "300px", height: "auto" }} alt="npm"></img>
             </div>
 
             <div className="row-icon">
-            <img src= {npm} className="logo" style ={{ width: "300px", height: "auto" }} alt="npm"></img>
             <img src= {jquery} className="logo" style ={{ width: "300px", height: "auto" }} alt="jquery"></img>
             <img src= {bootsrap} className="logo" style ={{ width: "300px", height: "auto" }} alt="jquery"></img>
+            <img src= {sequelize} className="logo" style ={{ width: "300px", height: "auto" }} alt="sequelize"></img>
             </div>
             </div>
         </section>

@@ -17,27 +17,24 @@ function Resume() {
 <a href={resumePdf} download target="_blank" rel="noreferrer">
 <p className="resume-link">Download my resume</p></a>
            
+        <div className="resume-list">
+            <div className="row-icon">
+            <img src= {JS_HTML_CSS} className="logo" style ={{ width: "300px", height: "auto"}} alt="css, JS, CSS"></img>
+            <img src= {react} className="logo" style ={{ width: "300px", height: "auto" }} alt="react"></img>
+            <img src= {node} className="logo" style ={{ width: "300px", height: "auto" }} alt="node"></img>
+            </div>
+            <div className="row-icon">
+            <img src= {mongo} className="logo" style ={{ width: "300px", height: "auto" }} alt="mongo"></img>
+            <img src= {mysql} className="logo" style ={{ width: "300px", height: "auto" }} alt="mysql"></img>
+            <img src= {sequelize} className="logo" style ={{ width: "300px", height: "auto" }} alt="sequelize"></img>
+            </div>
 
-            <div className="row resume-row">
-            <img src= {JS_HTML_CSS} className="resume-icon" style ={{ width: "45%", height: "auto" }} alt="css, JS, CSS"></img>
-            <img src= {node} className="resume-icon" style ={{ width: "45%", height: "auto" }} alt="node"></img>
+            <div className="row-icon">
+            <img src= {npm} className="logo" style ={{ width: "300px", height: "auto" }} alt="npm"></img>
+            <img src= {jquery} className="logo" style ={{ width: "300px", height: "auto" }} alt="jquery"></img>
+            <img src= {bootsrap} className="logo" style ={{ width: "300px", height: "auto" }} alt="jquery"></img>
             </div>
-            <div className="row resume-row">
-            <img src= {mongo} className="resume-icon" style ={{ width: "55%", height: "auto" }} alt="mongo"></img>
-            <img src= {mysql} className="resume-icon" style ={{ width: "30%", height: "auto" }} alt="mysql"></img>
             </div>
-
-            <div className="row resume-row">
-            <img src= {react} className="resume-icon" style ={{ width: "55%", height: "auto" }} alt="react"></img>
-            <img src= {sequelize} className="resume-icon" style ={{ width: "45%", height: "auto" }} alt="sequelize"></img>
-            </div>
-            
-            <div className="row resume-row">
-            <img src= {npm} className="resume-icon" style ={{ width: "45%", height: "auto" }} alt="npm"></img>
-            <img src= {jquery} className="resume-icon" style ={{ width: "30%", height: "auto" }} alt="jquery"></img>
-            <img src= {bootsrap} className="resume-icon" style ={{ width: "30%", height: "auto" }} alt="jquery"></img>
-            </div>
-        
         </section>
     )
 };

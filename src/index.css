@@ -149,13 +149,15 @@ button[disabled] {
 
 img {
   max-width: 100%;
+  border-radius: 10%;
+
 }
 
 .picture {
   width: 95%;
   margin-left: 5%;
   flex-wrap: wrap;
-  border-radius: 15px 50px 30px 5px;
+  border-radius: 10%;
 }
 
 .row {
@@ -381,10 +383,10 @@ footer {
 }
 
 .profile-icon {
-  padding: 10px 10px;
+  padding: 10px 10px 10px 10px;
   border-style: solid;
-  margin-left: 2%;
-  margin-right: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .resume-icon {
@@ -398,6 +400,7 @@ footer {
 }
 
 .profile-row {
+  padding: 10px 10px 10px 10px;
   margin-left: 10%;
   margin-right: 10%;
 }
@@ -410,6 +413,11 @@ footer {
   font-size: xx-large;
   border-radius: 10px;
   background-color: black;
+}
+
+.resume-list {
+  padding: 20px 25px;
+  text-align: center;
 }
 
 

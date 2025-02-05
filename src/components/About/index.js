@@ -7,7 +7,7 @@ function About() {
       <h1 id="about"></h1>
       <div className="row">
       <div className="picture">
-      <img src={hankImg} class="rounded" style={{ width: "90%", 
+      <img src={hankImg}  style={{ width: "90%", 
        }} alt="hank" />
       </div>
       <div className="about">

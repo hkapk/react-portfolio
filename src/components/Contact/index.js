@@ -1,21 +1,53 @@
 import React, { useState } from 'react';
+import Swal from 'sweetalert2';
 
 
 import { validateEmail } from '../../utils/helpers';
 
 function ContactForm() {
-  const [formState, setFormState] = useState({ name: '', email: '', message: '' });
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", process.env.REACT_APP_ACCESS_KEY);
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: json
+    }).then((res) => res.json());
+
+    if (res.success) {
+      
+  Swal.fire({
+  title: "Thank you",
+  text: "Your message has been sent.",
+  icon: "success",
+});
+
+    }
+  };
+
+
+
+  const [formState] = useState({ name: '', email: '', message: '' });
 
   const [errorMessage, setErrorMessage] = useState('');
   const { name, email, message } = formState;
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!errorMessage) {
-      setFormState({ [e.target.name]: e.target.value });
-      console.log('Form', formState);
-    }
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   if (!errorMessage) {
+  //     setFormState({ [e.target.name]: e.target.value });
+  //     console.log('Form', formState);
+  //   }
+  // };
 
   const handleChange = (e) => {
     if (e.target.name === 'email') {
@@ -37,7 +69,7 @@ function ContactForm() {
   return (
     <section>
       <h1 id="contact">Contact me</h1>
-      <form id="contact-form" onSubmit={handleSubmit}>
+      <form id="contact-form" onSubmit={ onSubmit}>
         <div className="input">
           <label htmlFor="name">Name:</label>
           <div>

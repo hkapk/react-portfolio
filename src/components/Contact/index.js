@@ -24,13 +24,16 @@ function ContactForm() {
     }).then((res) => res.json());
 
     if (res.success) {
-      
+
   Swal.fire({
   title: "Thank you",
   text: "Your message has been sent.",
   icon: "success",
 });
 
+//reset form on submit
+const form = document.getElementById('contact-form');
+form.reset();
     }
   };
 

@@ -1,0 +1,50 @@
+import { useState } from 'react'
+import Nav from './components/Nav';
+import About from './components/About';
+import Portfolio from './components/Portfolio';
+import Contact from './components/Contact';
+import Resume from './components/Resume';
+import Footer from './components/Footer';
+
+import './App.css'
+
+function App() {
+  const [currentPage, setCurrentPage] = useState('About');
+
+  const renderPage = () => {
+    if (currentPage === 'About') {
+      return <About />;
+    }
+    if (currentPage === 'Portfolio') {
+      return <Portfolio />;
+    }
+
+    if (currentPage === 'Contact') {
+      return <Contact />;
+    }
+
+    if (currentPage === 'Resume') {
+      return <Resume />
+    }
+  };
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  return (
+    <>
+      <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
+
+
+      <main className="px-12 m-8 pt-28 sm:pt-18">
+        {renderPage()}
+      </main>
+
+      <Footer />
+    </>
+  );
+}
+
+export default App

@@ -7,12 +7,20 @@ import FoodImg from "../assets/project-img/food.png";
 import DgImg from "../assets/project-img/dg.png";
 import SkinsImg from "../assets/project-img/DgSkins.png";
 import WaldoImg from "../assets/project-img/WaldoBingo.png";
+import BruceImg from "../assets/project-img/bruce.png"
 
 
 export const portfolio = [
-
     {
         id: "1",
+        image: BruceImg,
+        title: "BruceManners.com",
+        description: "",
+        link: "https://brucemanners.com",
+        gh_link: "https://github.com/hkapk/brucecomedyjuggling"
+    },
+    {
+        id: "2",
         image: DgImg,
         title: "Disc Golf ScoreKeeper",
         description: "Disc Golf ScoreKeeper app built with a team",
@@ -20,7 +28,7 @@ export const portfolio = [
         gh_link: "https://github.com/hkapk/dg-score-card"
     },
     {
-        id: "2",
+        id: "3",
         image: SkinsImg,
         title: "Disc Golf Skins App",
         description: "Disc Golf Skins Scorekeeper App",
@@ -28,7 +36,7 @@ export const portfolio = [
         gh_link: "https://github.com/hkapk/Disc-Golf-Skins-ScoreKeeper"
     },
     {
-        id: "3",
+        id: "4",
         image: WaldoImg,
         title: "Waldo Bingo",
         description: "Waldo Bingo Caller Web App",
@@ -36,7 +44,7 @@ export const portfolio = [
         gh_link: "https://github.com/hkapk/waldo-caller"
     },
     {
-        id: "7",
+        id: "5",
         image: BudgetImg,
         title: "Budget Tracker",
         description: "Budget Tracking App Built with React and Heroku",
@@ -44,7 +52,7 @@ export const portfolio = [
         gh_link: "https://github.com/hkapk/budget-tracking-PWA"
     },
     {
-        id: "8",
+        id: "6",
         image: TechImg,
         title: "Tech Blog",
         description: "Tech Blog API",
@@ -52,7 +60,7 @@ export const portfolio = [
         gh_link: "https://github.com/hkapk/tech-blog"
     },
     {
-        id: "9",
+        id: "7",
         image: TrippinImg,
         title: "Trip Blog",
         description: "Vacation Blog built with React",
@@ -60,7 +68,7 @@ export const portfolio = [
         gh_link: "https://github.com/hkapk/trippin-worldwide"
     },
     {
-        id: "4",
+        id: "8",
         image: ZooImg,
         title: "ZooKeeper App",
         description: "Zookeeper App built and deployed",
@@ -68,7 +76,7 @@ export const portfolio = [
         gh_link: "https://github.com/hkapk/zookeeper"
     },
     {
-        id: "5",
+        id: "9",
         image: NoteImg,
         title: "Note Taking App",
         description: "Note Taking App for Read, Write, Updating and Deleting from an API",
@@ -76,7 +84,7 @@ export const portfolio = [
         gh_link: "https://github.com/hkapk/note-taker"
     },
     {
-        id: "6",
+        id: "10",
         image: FoodImg,
         title: "Food Festival Website",
         description: "Food Festival Website",

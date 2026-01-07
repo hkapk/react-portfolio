@@ -10,7 +10,7 @@ function Nav({ currentPage, handlePageChange }) {
         <nav className="bg-red-50 w-full fixed top-0 left-0 z-50">
             {/* DESKTOP */}
             <div className="hidden sm:grid grid-cols-3 grid-rows-3 w-full px-4">
-                <h1 className="col-start-2 pt-2 row-start-1 justify-self-start text-xl font-semibold">
+                <h1 className="col-start-2 pt-2 row-start-1 text-center text-xl font-semibold">
                     Hank Kapka | Web Developer
                 </h1>
 

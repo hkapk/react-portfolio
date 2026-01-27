@@ -43,7 +43,7 @@ function Contact() {
 
     return (
 
-        <div className="py-4 bg-slate-50 text-center">
+        <div className="py-4 lg:mt-12 mt-4 mb-4 bg-slate-50 text-center">
             <p>Contact Hank today!</p>
             <form onSubmit={onSubmit} className="px-6 py-6">
                 <div className="pt-12">

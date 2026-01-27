@@ -34,16 +34,15 @@ function App() {
   };
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
 
-
-      <main className="px-12 m-8 pt-28 sm:pt-18">
+      <main className="flex-grow px-12 pt-28 sm:pt-18">
         {renderPage()}
       </main>
 
       <Footer />
-    </>
+    </div>
   );
 }
 

@@ -3,7 +3,7 @@ import { portfolio } from "../../data/portfolio";
 
 function Portfolio() {
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pt-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pt-8 mt-4">
             {portfolio.map((item) => (
                 <div
                     key={item.id}

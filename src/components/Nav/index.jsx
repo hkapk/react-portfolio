@@ -1,29 +1,90 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
 import { SocialIcon } from "react-social-icons";
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { SplitText } from "gsap/all";
+
+gsap.registerPlugin(SplitText, useGSAP);
 
 function Nav({ currentPage, handlePageChange }) {
     const [isOpen, setIsOpen] = useState(false);
+    const container = useRef(null);
+    const socialsRef = useRef(null);
+    const mobileSocialsRef = useRef(null);
+    const navLinksRef = useRef(null);
+    const desktopH1Ref = useRef(null);
+    const mobileH1Ref = useRef(null);
+
+
+
+    useGSAP(
+        () => {
+            gsap.set([socialsRef.current, navLinksRef.current, mobileSocialsRef.current], {
+                autoAlpha: 0,
+                y: 20,
+            });
+
+            const isMobile = window.innerWidth < 640;
+            const h1ToAnimate = isMobile ? mobileH1Ref.current : desktopH1Ref.current;
+
+            const split = SplitText.create(h1ToAnimate, { type: "chars" });
+
+            const tl = gsap.timeline();
+
+            // H1 bounce
+            tl.to(split.chars, {
+                duration: 0.4,
+                scaleY: 11,
+                transformOrigin: "bottom left",
+                stagger: { each: 0.06, from: "random" },
+                ease: "back.in",
+            });
+
+            // H1 returns + icons animate in together
+            tl.to(split.chars, {
+                duration: 0.4,
+                y: 0,
+                scaleY: 1,
+                ease: "back.out(1.7)",
+            });
+
+            const iconsToAnimate = isMobile ? mobileSocialsRef.current : [socialsRef.current, navLinksRef.current];
+
+            // Animate socials + nav **at same time as H1 returns**
+            tl.to(iconsToAnimate, {
+                autoAlpha: 1,
+                y: 0,
+                duration: 0.5,
+                stagger: 0.1,
+                ease: "back.out(1.7)",
+            }, "<"); // "<" = start at same time as previous tween
+
+        },
+        { scope: container }
+    );
+
+
+
 
     return (
-        <nav className="fixed top-0 left-0 w-full z-50">
+        <nav ref={container} className="fixed top-0 left-0 w-full z-50">
 
             <div className="bg-red-50 w-full">
 
-
                 <div className="hidden sm:grid grid-cols-3 grid-rows-3 w-full px-4">
-                    <h1 className="col-start-2 pt-2 row-start-1 text-center text-xl font-semibold">
+                    <h1 ref={desktopH1Ref} className="col-start-2 pt-2 row-start-1 text-center text-xl font-semibold">
                         Hank Kapka | Web Developer
                     </h1>
 
-                    <div className="col-start-2 row-start-2 justify-self-center flex gap-2 mt-1 pb-1">
+                    <div ref={socialsRef} className="col-start-2 row-start-2 justify-self-center flex gap-2 mt-1 pb-1">
                         <SocialIcon url="https://www.github.com/hkapk" style={{ height: 30, width: 30 }} fgColor="#0f172a" bgColor="transparent" />
                         <SocialIcon url="https://www.linkedin.com/in/hank-kapka" style={{ height: 30, width: 30 }} fgColor="#0f172a" bgColor="transparent" />
                         <SocialIcon url="mailto:hankkapka@gmail.com" style={{ height: 30, width: 30 }} fgColor="#0f172a" bgColor="transparent" />
                     </div>
 
-                    <div className="col-span-3 row-start-3 flex justify-center space-x-8 mt-1">
+                    <div ref={navLinksRef} className="col-span-3 row-start-3 flex justify-center space-x-8 mt-1">
                         {["About", "Portfolio", "Contact", "Resume"].map(page => (
                             <a
                                 key={page}
@@ -38,17 +99,20 @@ function Nav({ currentPage, handlePageChange }) {
                 </div>
 
                 {/* ---------- MOBILE HEADER ---------- */}
-                <div className="sm:hidden relative flex items-start justify-between px-6 py-4">
-                    <h1 className="text-lg font-semibold">HKWD</h1>
-
-                    <div className="top-full left-6 flex gap-2 pt-2">
-                        <SocialIcon url="https://www.github.com/hkapk" style={{ height: 28, width: 28 }} fgColor="#0f172a" bgColor="transparent" />
-                        <SocialIcon url="https://www.linkedin.com/in/hank-kapka" style={{ height: 28, width: 28 }} fgColor="#0f172a" bgColor="transparent" />
-                        <SocialIcon url="mailto:hankkapka@gmail.com" style={{ height: 28, width: 28 }} fgColor="#0f172a" bgColor="transparent" />
+                <div className="sm:hidden relative grid grid-cols-[1fr_auto] gap-4 items-start px-6 py-4">
+                    {/* Left column: H1 + Socials */}
+                    <div className="flex flex-col gap-2">
+                        <h1 ref={mobileH1Ref} className="text-lg font-semibold pl-2">HKWD</h1>
+                        <div ref={mobileSocialsRef} className="flex gap-2">
+                            <SocialIcon url="https://www.github.com/hkapk" style={{ height: 28, width: 28 }} fgColor="#0f172a" bgColor="transparent" />
+                            <SocialIcon url="https://www.linkedin.com/in/hank-kapka" style={{ height: 28, width: 28 }} fgColor="#0f172a" bgColor="transparent" />
+                            <SocialIcon url="mailto:hankkapka@gmail.com" style={{ height: 28, width: 28 }} fgColor="#0f172a" bgColor="transparent" />
+                        </div>
                     </div>
 
+                    {/* Right column: Hamburger / Close button */}
                     <button
-                        className="text-4xl text-slate-900 bg-slate-50 transition-transform"
+                        className="text-4xl text-slate-900 bg-slate-50 transition-transform self-start"
                         onClick={() => setIsOpen(!isOpen)}
                     >
                         {isOpen ? <IoClose /> : <RxHamburgerMenu />}

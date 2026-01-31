@@ -1,10 +1,11 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
 import { SocialIcon } from "react-social-icons";
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { SplitText } from "gsap/all";
+
 
 gsap.registerPlugin(SplitText, useGSAP);
 
@@ -18,52 +19,63 @@ function Nav({ currentPage, handlePageChange }) {
     const mobileH1Ref = useRef(null);
 
 
+    useEffect(() => {
+        if (!container.current) return;
 
-    useGSAP(
-        () => {
-            gsap.set([socialsRef.current, navLinksRef.current, mobileSocialsRef.current], {
-                autoAlpha: 0,
-                y: 20,
-            });
+        const isMobile = window.innerWidth < 640;
+        const h1 = isMobile ? mobileH1Ref.current : desktopH1Ref.current;
+        if (!h1) return;
 
-            const isMobile = window.innerWidth < 640;
-            const h1ToAnimate = isMobile ? mobileH1Ref.current : desktopH1Ref.current;
+        // 🔥 RESET DOM FIRST
+        const split = new SplitText(h1, { type: "chars" });
 
-            const split = SplitText.create(h1ToAnimate, { type: "chars" });
+        gsap.set(
+            [socialsRef.current, navLinksRef.current, mobileSocialsRef.current],
+            { autoAlpha: 0, y: 20 }
+        );
 
-            const tl = gsap.timeline();
+        const tl = gsap.timeline();
 
-            // H1 bounce
-            tl.to(split.chars, {
+        tl.fromTo(
+            split.chars,
+            { scaleY: 1 },
+            {
                 duration: 0.4,
                 scaleY: 11,
                 transformOrigin: "bottom left",
                 stagger: { each: 0.06, from: "random" },
                 ease: "back.in",
-            });
+            }
+        );
 
-            // H1 returns + icons animate in together
-            tl.to(split.chars, {
-                duration: 0.4,
-                y: 0,
-                scaleY: 1,
-                ease: "back.out(1.7)",
-            });
+        tl.to(split.chars, {
+            duration: 0.4,
+            scaleY: 1,
+            ease: "back.out(1.7)",
+        });
 
-            const iconsToAnimate = isMobile ? mobileSocialsRef.current : [socialsRef.current, navLinksRef.current];
+        const icons = isMobile
+            ? mobileSocialsRef.current
+            : [socialsRef.current, navLinksRef.current];
 
-            // Animate socials + nav **at same time as H1 returns**
-            tl.to(iconsToAnimate, {
+        tl.to(
+            icons,
+            {
                 autoAlpha: 1,
                 y: 0,
                 duration: 0.5,
                 stagger: 0.1,
                 ease: "back.out(1.7)",
-            }, "<"); // "<" = start at same time as previous tween
+            },
+            "<"
+        );
 
-        },
-        { scope: container }
-    );
+        // ✅ CLEANUP — THIS IS CRITICAL
+        return () => {
+            tl.kill();
+            split.revert();
+        };
+    }, [currentPage]);
 
 
 
@@ -100,7 +112,7 @@ function Nav({ currentPage, handlePageChange }) {
 
                 {/* ---------- MOBILE HEADER ---------- */}
                 <div className="sm:hidden relative grid grid-cols-[1fr_auto] gap-4 items-start px-6 py-4">
-                    {/* Left column: H1 + Socials */}
+
                     <div className="flex flex-col gap-2">
                         <h1 ref={mobileH1Ref} className="text-lg font-semibold pl-2">HKWD</h1>
                         <div ref={mobileSocialsRef} className="flex gap-2">
@@ -110,7 +122,7 @@ function Nav({ currentPage, handlePageChange }) {
                         </div>
                     </div>
 
-                    {/* Right column: Hamburger / Close button */}
+
                     <button
                         className="text-4xl text-slate-900 bg-slate-50 transition-transform self-start"
                         onClick={() => setIsOpen(!isOpen)}

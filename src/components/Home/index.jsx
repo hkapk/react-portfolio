@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import BruceSite from "../../assets/home-img/brucewebsite.png";
 import Hankimg1 from "../../assets/home-img/hankimg1.png";
+import bgImage from "../../assets/backgrounds/baseballstadium.jpg";
 
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
@@ -56,16 +57,19 @@ function Home({ handlePageChange }) {
     return (
         <div className="">
             {/* Hero Section */}
-            <section class="relative w-full h-screen bg-[url('src/assets/backgrounds/baseballstadium.jpg')] bg-cover bg-center flex items-end justify-center pb-16 text-center overflow-x-hidden">
+            <section className="relative w-full h-screen  
+            bg-cover bg-center flex items-end justify-center pb-16 
+            text-center overflow-x-hidden"
+                style={{ backgroundImage: `url(${bgImage})` }}>
 
-                <div class="absolute inset-0 bg-black/40"></div>
+                <div className="absolute inset-0 bg-black/40"></div>
 
 
-                <div class="relative max-w-full px-4">
-                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+                <div className="relative max-w-full px-4">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
                         Building your digital presence
                     </h2>
-                    <p class="text-xl sm:text-2xl md:text-3xl font-semibold text-white">
+                    <p className="text-xl sm:text-2xl md:text-3xl font-semibold text-white mb-8">
                         Your website, your brand, your rules. Fully coded from scratch.
                     </p>
                 </div>

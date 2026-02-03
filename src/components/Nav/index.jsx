@@ -26,7 +26,6 @@ function Nav({ currentPage, handlePageChange }) {
         const h1 = isMobile ? mobileH1Ref.current : desktopH1Ref.current;
         if (!h1) return;
 
-        // 🔥 RESET DOM FIRST
         const split = new SplitText(h1, { type: "chars" });
 
         gsap.set(
@@ -70,7 +69,6 @@ function Nav({ currentPage, handlePageChange }) {
             "<"
         );
 
-        // ✅ CLEANUP — THIS IS CRITICAL
         return () => {
             tl.kill();
             split.revert();
@@ -97,7 +95,7 @@ function Nav({ currentPage, handlePageChange }) {
                     </div>
 
                     <div ref={navLinksRef} className="col-span-3 row-start-3 flex justify-center space-x-8 mt-1">
-                        {["About", "Portfolio", "Contact", "Resume"].map(page => (
+                        {["Home", "About", "Portfolio", "Contact", "Resume"].map(page => (
                             <a
                                 key={page}
                                 href={`#${page}`}

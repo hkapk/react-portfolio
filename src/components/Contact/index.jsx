@@ -43,10 +43,10 @@ function Contact() {
 
     return (
 
-        <div className="py-4 lg:mt-12 mt-4 mb-4 bg-slate-50 text-center">
-            <p>Contact Hank today!</p>
+        <div className="py-4 lg:mt-12 mt-8 mb-4 bg-slate-50 text-center">
+            <p className="pt-2 font-bold">Fill out the form to get in touch</p>
             <form onSubmit={onSubmit} className="px-6 py-6">
-                <div className="pt-12">
+                <div className="pt-4">
                     <label className="block text-sm text-left font-medium m-2">Name</label>
                     <input
                         type="text"

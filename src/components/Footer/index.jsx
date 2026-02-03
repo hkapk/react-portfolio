@@ -10,7 +10,7 @@ function Footer() {
                 <div className="transform transition-transform duration-200 hover:scale-110 hover:opacity-90 cursor-pointer"><SocialIcon url="mailto:hankkapka@gmail.com" style={{ height: 64, width: 64 }} fgColor="#f5f5f5" bgColor="transparent" /> </div>
             </div>
 
-            <p className="text-center text-white pb-2">Copyright © 2025</p>
+            <p className="text-center text-white pb-2">Copyright © 2026</p>
             <p className="text-center text-white pb-6 font-semibold">
                 <a href="https://hankkapka.com" target="_blank" rel="noopener noreferrer">Powered by Hank</a>
             </p>

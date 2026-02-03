@@ -148,7 +148,7 @@ function Home({ handlePageChange }) {
 
             </div>
 
-            <section className="pt-44"></section>
+            <section className="pt-24"></section>
         </div>
     );
 }

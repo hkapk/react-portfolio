@@ -41,7 +41,7 @@ function App() {
     <div className="min-h-screen flex flex-col">
       <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
 
-      <main className="flex-grow px-12 pt-28 sm:pt-18">
+      <main className="flex-grow  pt-24 sm:pt-12">
         {renderPage()}
       </main>
 

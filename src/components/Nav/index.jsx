@@ -83,7 +83,7 @@ function Nav({ currentPage, handlePageChange }) {
 
             <div className="bg-red-50 w-full">
 
-                <div className="hidden sm:grid grid-cols-3 grid-rows-3 w-full px-4">
+                <div className="hidden sm:grid grid-cols-3 grid-rows-3 w-full ">
                     <h1 ref={desktopH1Ref} className="col-start-2 pt-2 row-start-1 text-center text-xl font-semibold">
                         Hank Kapka | Web Developer
                     </h1>
@@ -140,7 +140,7 @@ function Nav({ currentPage, handlePageChange }) {
         `}
             >
                 <div className="mx-auto mt-4 w-2/3 max-w-md rounded-xl bg-gray-900/80 text-center text-white py-4 space-y-4">
-                    {["About", "Portfolio", "Contact", "Resume"].map(page => (
+                    {["Home", "About", "Portfolio", "Contact", "Resume"].map(page => (
                         <a
                             key={page}
                             href={`#${page}`}

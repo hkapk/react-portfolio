@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import BruceSite from "../../assets/home-img/brucewebsite.png";
 import Hankimg1 from "../../assets/home-img/hankimg1.png";
-import bgImage from "../../assets/backgrounds/baseballstadium.jpg";
+import bgImage from "../../assets/backgrounds/frisbeebg.jpg";
 
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
@@ -69,7 +69,7 @@ function Home({ handlePageChange }) {
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
                         Building your digital presence
                     </h2>
-                    <p className="text-xl sm:text-2xl md:text-3xl font-semibold text-white mb-8">
+                    <p className="text-xl sm:text-2xl md:text-3xl font-semibold text-white mb-16">
                         Your website, your brand, your rules. Fully coded from scratch.
                     </p>
                 </div>

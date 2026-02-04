@@ -4,7 +4,7 @@ import resumePdf from "../../assets/resume.pdf/";
 
 function Resume() {
     return (
-        <div className="lg:mt-2">
+        <div className="lg:mt-8">
             <div className="flex items-center justify-center">
                 <div className="grid grid-cols-1 md:grid-cols-3 px-2 gap-4 pt-8">
                     {resumeImages.map((src, index) => (
